@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <title>3D RL Agent - Three.js + Chart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>3D Reinforcement Learning (Three.js) + Training Monitor</h1>
+
+<div id="ui">
+    <div class="panel">
+        <h3>تنظیمات آموزش</h3>
+
+        <label>تعداد اپیزود:</label>
+        <input id="episodesInput" type="number" value="30" min="1" style="width:80px;">
+
+        <br><br>
+
+        <label>سرعت انیمیشن:</label>
+        <select id="speedInput" style="width:120px;">
+            <option value="50">Fast</option>
+            <option value="120" selected>Normal</option>
+            <option value="300">Slow</option>
+        </select>
+
+        <br><br>
+
+        <button id="startBtn">شروع آموزش</button>
+    </div>
+
+    <div class="panel">
+        <h3>نمودار عملکرد مدل</h3>
+        <canvas id="chart" width="400" height="350"></canvas>
+    </div>
+</div>
+
+<canvas id="scene"></canvas>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

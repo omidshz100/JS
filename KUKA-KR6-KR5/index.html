@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <title>KUKA KR6 6DOF Web Simulation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>شبیه‌سازی ربات صنعتی KUKA KR6 - شش درجه آزادی (WebGL)</h1>
+
+<div id="ui">
+    <div class="panel">
+        <h3>Joint Control</h3>
+
+        <button id="pickPlaceBtn" style="margin-top:20px;">Pick & Place Animation</button>
+
+        <label>Joint 1</label>
+        <input type="range" id="j1" min="-180" max="180" value="0">
+        
+        <label>Joint 2</label>
+        <input type="range" id="j2" min="-90" max="90" value="0">
+
+        <label>Joint 3</label>
+        <input type="range" id="j3" min="-90" max="90" value="0">
+
+        <label>Joint 4</label>
+        <input type="range" id="j4" min="-180" max="180" value="0">
+
+        <label>Joint 5</label>
+        <input type="range" id="j5" min="-180" max="180" value="0">
+
+        <label>Joint 6</label>
+        <input type="range" id="j6" min="-180" max="180" value="0">
+    </div>
+</div>
+
+<canvas id="scene"></canvas>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="kuka_model.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <title>Q-Learning Visualization</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>شبیه‌ساز Q-Learning + نمودار عملکرد</h1>
+
+<div id="container">
+    <div>
+        <h3>محیط یادگیری</h3>
+        <label>تعداد اپیزود:</label>
+<input id="episodesInput" type="number" value="30" min="1" style="width:80px;">
+<!-- تنظیم سرعت -->
+<label>سرعت انیمیشن:</label>
+<select id="speedInput" style="width:120px;">
+    <option value="50">Fast</option>
+    <option value="150" selected>Normal</option>
+    <option value="400">Slow</option>
+</select>
+
+        <div id="grid"></div>
+        <button id="startBtn">شروع آموزش</button>
+    </div>
+
+    <div>
+        <h3>نمودار عملکرد مدل (Reward per Episode)</h3>
+        <canvas id="chart" width="400" height="400"></canvas>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
